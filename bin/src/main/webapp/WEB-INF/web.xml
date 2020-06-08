@@ -9,7 +9,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>LogServlet</servlet-name>
-        <url-pattern>/logs</url-pattern>
+        <url-pattern>/whatyourbrowser</url-pattern>
     </servlet-mapping>
 
 
