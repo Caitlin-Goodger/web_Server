@@ -55,7 +55,7 @@ public class LogsServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         StringBuffer jb = new StringBuffer();
         String line = null;
         try {
@@ -77,8 +77,10 @@ public class LogsServlet extends HttpServlet {
         if(!foundDupicate) {
             jsonLogs.add(0, jsonObject);
             resp.sendError(HttpServletResponse.SC_CREATED, "Log added");
+            return;
         } else {
             resp.sendError(HttpServletResponse.SC_CONFLICT, "Duplicate log found");
+            return;
         }
     }
 }

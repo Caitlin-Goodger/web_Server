@@ -65,4 +65,15 @@ public class TestGetLogs {
         logsServlet.doGet(req,resp);
         assertEquals(400,resp.getStatus());
     }
+
+    @Test
+    public void testSingleGetINoParameters() throws ServletException, IOException {
+        MockHttpServletRequest req = new MockHttpServletRequest();
+        MockHttpServletResponse resp = new MockHttpServletResponse();
+
+        LogsServlet logsServlet = new LogsServlet();
+
+        logsServlet.doGet(req,resp);
+        assertEquals(400,resp.getStatus());
+    }
 }
