@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.Buffer;
 import java.util.ArrayList;
 
 import org.apache.log4j.spi.LoggingEvent;
@@ -52,6 +53,16 @@ public class LogsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        StringBuffer jb = new StringBuffer();
+        String line = null;
+        try {
+            BufferedReader reader = req.getReader();
+            while ((line = reader.readLine()) != null)
+                jb.append(line);
+        } catch (Exception e) { /*report an error*/ }
+        System.out.println(jb);
+        JSONObject jsonObject = new JSONObject(jb.toString());
+        jsonLogs.add(0,jsonObject);
 
     }
 }
