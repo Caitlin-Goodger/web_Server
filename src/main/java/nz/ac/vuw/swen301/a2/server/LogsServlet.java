@@ -1,13 +1,11 @@
 package nz.ac.vuw.swen301.a2.server;
 
-import com.google.gson.Gson;
 import org.json.JSONObject;
-import org.apache.log4j.Logger;
-import org.apache.log4j.Level;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,10 +13,12 @@ import java.util.ArrayList;
 import org.apache.log4j.spi.LoggingEvent;
 
 
-
 public class LogsServlet extends HttpServlet {
 
-    public static ArrayList<LoggingEvent> logs = new ArrayList<>();;
+    public LogsServlet() {
+    }
+
+    public static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,29 +26,32 @@ public class LogsServlet extends HttpServlet {
         resp.setContentType("application/json");
         String sLimit = req.getParameter("limit");
         String sLevel = req.getParameter("level");
-        int limit = Integer.parseInt(sLimit);
-        ArrayList<LoggingEvent> logsEvents = new ArrayList<>()
+        int limit = 0;
+        try {
+            limit = Integer.parseInt(sLimit);
+        } catch (NumberFormatException e) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid limit");
+        }
+
+        if (sLimit == null || limit < 0 || limit > Integer.MAX_VALUE) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid limit");
+        }
+        if (sLevel == null) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid level");
+        }
+        ArrayList<LoggingEvent> logsEvents = new ArrayList<>();
         int count = 0;
-        for(LoggingEvent event : logs) {
+        out.println(jsonLogs.size());
+        for(JSONObject jsonObj : jsonLogs) {
             if(count<limit) {
                 count++;
-                logsEvents.add(event);
+                out.println(jsonObj);
             }
         }
-        String jsonArray = new Gson().toJson(logsEvents);
-        out.println(jsonArray);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
-        resp.setContentType("application/json");
-        String id = req.getParameter("id");
-        out.println("<html>");
-        out.println("<body>");
-        out.println(id);
-        out.println(id);
-        out.println("</body>");
-        out.println("</html>");
+
     }
 }
