@@ -1,6 +1,7 @@
 package test.nz.ac.vuw.swen301.a2.server;
 
 import nz.ac.vuw.swen301.a2.server.LogsServlet;
+import org.json.JSONObject;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
@@ -75,5 +76,38 @@ public class TestGetLogs {
 
         logsServlet.doGet(req,resp);
         assertEquals(400,resp.getStatus());
+    }
+
+    @Test
+    public void testGetAfterPost() throws ServletException, IOException {
+        MockHttpServletRequest req = new MockHttpServletRequest();
+        MockHttpServletResponse resp = new MockHttpServletResponse();
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id","1234");
+        jsonObject.put("message","Testing");
+        jsonObject.put("thread", "Main");
+        jsonObject.put("timestamp", "12:00.00");
+        jsonObject.put("logger", "com.example.foo");
+        jsonObject.put("level", "DEBUG");
+
+        req.setContentType("application/json");
+        req.setContent(jsonObject.toString().getBytes("utf-8"));
+
+        LogsServlet logsServlet = new LogsServlet();
+
+        logsServlet.doPost(req,resp);
+
+        MockHttpServletRequest getReq = new MockHttpServletRequest();
+        MockHttpServletResponse getResp = new MockHttpServletResponse();
+
+        getReq.setParameter("level", "WARN");
+        getReq.setParameter("limit","10");
+
+        logsServlet.doGet(getReq,getResp);
+
+        assertEquals(201, resp.getStatus());
+        assertEquals(200,getResp.getStatus());
+
     }
 }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="952a3de9-0a54-4dce-a1ca-7126e7b6c2ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java" afterDir="false" />
     </list>
@@ -27,7 +26,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
+            <state relative-caret-position="912">
               <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -36,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="433">
+              <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+            <state relative-caret-position="127">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,9 +85,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java" />
         <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java" />
       </list>
     </option>
   </component>
@@ -168,7 +167,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591696283090" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591696630576" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
@@ -185,7 +184,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestPostLogs">
+  <component name="RunManager" selected="JUnit.TestGetLogs">
     <configuration name="TestGetLogs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webapp" />
       <extension name="coverage">
@@ -197,6 +196,22 @@
       <option name="PACKAGE_NAME" value="test.nz.ac.vuw.swen301.a2.server" />
       <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestGetLogs" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGetLogs.testGetAfterPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.nz.ac.vuw.swen301.a2.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.nz.ac.vuw.swen301.a2.server" />
+      <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestGetLogs" />
+      <option name="METHOD_NAME" value="testGetAfterPost" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,9 +265,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestGetLogs" />
+        <item itemvalue="JUnit.TestGetLogs.testGetAfterPost" />
         <item itemvalue="JUnit.TestPostLogs" />
         <item itemvalue="JUnit.TestPostLogs.testPostDuplicate" />
-        <item itemvalue="JUnit.TestGetLogs" />
         <item itemvalue="JUnit.TestGetLogs.testSingleGetNoLimitMethod" />
       </list>
     </recent_temporary>
@@ -271,44 +287,44 @@
       <workItem from="1591605976820" duration="849000" />
       <workItem from="1591606865411" duration="5570000" />
       <workItem from="1591683437884" duration="4413000" />
-      <workItem from="1591693292725" duration="2904000" />
+      <workItem from="1591693292725" duration="3335000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestPostLogs - 2020.06.09 at 21h 42m 49s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs - 2020.06.09 at 21h 43m 01s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs - 2020.06.09 at 21h 44m 51s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs_testPostDuplicate - 2020.06.09 at 21h 45m 29s.xml">
-      <configuration name="TestPostLogs.testPostDuplicate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs - 2020.06.09 at 21h 46m 10s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs_testPostDuplicate - 2020.06.09 at 21h 46m 46s.xml">
-      <configuration name="TestPostLogs.testPostDuplicate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs_testPostDuplicate - 2020.06.09 at 21h 47m 51s.xml">
-      <configuration name="TestPostLogs.testPostDuplicate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs_testPostDuplicate - 2020.06.09 at 21h 48m 23s.xml">
-      <configuration name="TestPostLogs.testPostDuplicate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestPostLogs_testPostDuplicate - 2020.06.09 at 21h 48m 39s.xml">
-      <configuration name="TestPostLogs.testPostDuplicate" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestPostLogs - 2020.06.09 at 21h 48m 55s.xml">
       <configuration name="TestPostLogs" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestPostLogs - 2020.06.09 at 21h 50m 10s.xml">
+      <configuration name="TestPostLogs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestPostLogs - 2020.06.09 at 21h 51m 27s.xml">
+      <configuration name="TestPostLogs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGetLogs - 2020.06.09 at 21h 54m 21s.xml">
+      <configuration name="TestGetLogs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGetLogs - 2020.06.09 at 21h 54m 39s.xml">
+      <configuration name="TestGetLogs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGetLogs - 2020.06.09 at 21h 54m 53s.xml">
+      <configuration name="TestGetLogs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGetLogs - 2020.06.09 at 21h 55m 47s.xml">
+      <configuration name="TestGetLogs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGetLogs - 2020.06.09 at 21h 56m 27s.xml">
+      <configuration name="TestGetLogs" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGetLogs_testGetAfterPost - 2020.06.09 at 21h 56m 41s.xml">
+      <configuration name="TestGetLogs.testGetAfterPost" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGetLogs - 2020.06.09 at 21h 57m 05s.xml">
+      <configuration name="TestGetLogs" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16148000" />
+    <option name="totallyTimeSpent" value="16579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -369,10 +385,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="127">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -381,7 +397,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
+        <state relative-caret-position="912">
           <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -389,10 +405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="76" column="36" selection-start-line="76" selection-start-column="36" selection-end-line="76" selection-end-column="36" />
+        <state relative-caret-position="433">
+          <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

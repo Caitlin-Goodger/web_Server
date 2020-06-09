@@ -68,5 +68,5 @@ public class TestPostLogs {
 
         assertEquals(409,resp2.getStatus());
     }
-    
+
 }
