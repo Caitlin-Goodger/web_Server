@@ -60,9 +60,20 @@ public class LogsServlet extends HttpServlet {
             while ((line = reader.readLine()) != null)
                 jb.append(line);
         } catch (Exception e) { /*report an error*/ }
-        System.out.println(jb);
+        //System.out.println(jb);
         JSONObject jsonObject = new JSONObject(jb.toString());
-        jsonLogs.add(0,jsonObject);
 
+        boolean foundDupicate = false;
+        for(JSONObject j : jsonLogs) {
+            if(j.get("id").equals(jsonObject.get("id"))) {
+                foundDupicate = true;
+            }
+        }
+        if(!foundDupicate) {
+            jsonLogs.add(0, jsonObject);
+            resp.sendError(HttpServletResponse.SC_CREATED, "Log added");
+        } else {
+            resp.sendError(HttpServletResponse.SC_CONFLICT, "Duplicate log found");
+        }
     }
 }
