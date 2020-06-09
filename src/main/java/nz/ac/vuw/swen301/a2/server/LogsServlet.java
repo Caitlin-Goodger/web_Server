@@ -59,8 +59,10 @@ public class LogsServlet extends HttpServlet {
             BufferedReader reader = req.getReader();
             while ((line = reader.readLine()) != null)
                 jb.append(line);
-        } catch (Exception e) { /*report an error*/ }
-        //System.out.println(jb);
+        } catch (Exception e) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid json");
+            return;
+        }
         JSONObject jsonObject = new JSONObject(jb.toString());
 
         boolean foundDupicate = false;
