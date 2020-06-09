@@ -22,7 +22,7 @@ public class LogsServlet extends HttpServlet {
     public static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         resp.setContentType("application/json");
         String sLimit = req.getParameter("limit");
@@ -32,13 +32,16 @@ public class LogsServlet extends HttpServlet {
             limit = Integer.parseInt(sLimit);
         } catch (NumberFormatException e) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid limit");
+            return;
         }
 
         if (sLimit == null || limit < 0 || limit > Integer.MAX_VALUE) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid limit");
+            return;
         }
         if (sLevel == null) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid level");
+            return;
         }
         ArrayList<LoggingEvent> logsEvents = new ArrayList<>();
         int count = 0;
