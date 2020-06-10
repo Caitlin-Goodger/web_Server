@@ -50,12 +50,17 @@ public class LogsServlet extends HttpServlet {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid level");
             return;
         }
+        out.println("[");
         for(JSONObject jsonObj : jsonLogs) {
             if(count<limit && levelInt <= getLevel(jsonObj.get("level").toString())) {
+                if(count > 0) {
+                    out.println(",");
+                }
                 count++;
                 out.println(jsonObj);
             }
         }
+        out.println("]");
     }
 
     @Override
