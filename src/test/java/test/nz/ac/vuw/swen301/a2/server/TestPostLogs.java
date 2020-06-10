@@ -8,7 +8,6 @@ import org.springframework.mock.web.MockHttpServletResponse;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
-import java.time.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,7 +19,7 @@ public class TestPostLogs {
         MockHttpServletResponse resp = new MockHttpServletResponse();
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("id","123456778");
+        jsonObject.put("id","1234567868768778");
         jsonObject.put("message","Testing");
         jsonObject.put("thread", "Main");
         jsonObject.put("timestamp", "2019-07-29T09:12:33.001Z");

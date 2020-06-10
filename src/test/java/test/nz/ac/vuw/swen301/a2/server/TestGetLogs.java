@@ -84,7 +84,7 @@ public class TestGetLogs {
         MockHttpServletResponse resp = new MockHttpServletResponse();
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("id","1234");
+        jsonObject.put("id","1235435434");
         jsonObject.put("message","Testing");
         jsonObject.put("thread", "Main");
         jsonObject.put("timestamp", "2019-07-29T09:12:33.001Z");
@@ -123,5 +123,35 @@ public class TestGetLogs {
 
         logsServlet.doGet(req,resp);
         assertEquals(400,resp.getStatus());
+    }
+
+    @Test
+    public void testContentTypeCorrect() throws ServletException, IOException {
+        MockHttpServletRequest req = new MockHttpServletRequest();
+        MockHttpServletResponse resp = new MockHttpServletResponse();
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id","1234");
+        jsonObject.put("message","Testing");
+        jsonObject.put("thread", "Main");
+        jsonObject.put("timestamp", "2019-07-29T09:12:33.001Z");
+        jsonObject.put("logger", "com.example.foo");
+        jsonObject.put("level", "DEBUG");
+
+        req.setContentType("application/json");
+        req.setContent(jsonObject.toString().getBytes("utf-8"));
+
+        LogsServlet logsServlet = new LogsServlet();
+
+        logsServlet.doPost(req,resp);
+
+        MockHttpServletRequest getReq = new MockHttpServletRequest();
+        MockHttpServletResponse getResp = new MockHttpServletResponse();
+
+        getReq.setParameter("level", "WARN");
+        getReq.setParameter("limit","10");
+
+        logsServlet.doGet(getReq,getResp);
+        assertEquals("application/json",getResp.getContentType());
     }
 }
