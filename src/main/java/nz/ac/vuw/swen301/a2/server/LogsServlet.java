@@ -121,7 +121,7 @@ public class LogsServlet extends HttpServlet {
     }
 
     /**
-     * Method to convert the level into an int so that they can be compared. 
+     * Method to convert the level into an int so that they can be compared.
      * @param level
      * @return
      */
