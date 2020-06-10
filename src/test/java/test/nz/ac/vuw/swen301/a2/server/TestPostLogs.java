@@ -19,7 +19,7 @@ public class TestPostLogs {
         MockHttpServletResponse resp = new MockHttpServletResponse();
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("id","1234");
+        jsonObject.put("id","123456778");
         jsonObject.put("message","Testing");
         jsonObject.put("thread", "Main");
         jsonObject.put("timestamp", "12:00.00");
@@ -32,6 +32,7 @@ public class TestPostLogs {
         LogsServlet logsServlet = new LogsServlet();
 
         logsServlet.doPost(req,resp);
+
         assertEquals(201,resp.getStatus());
     }
 

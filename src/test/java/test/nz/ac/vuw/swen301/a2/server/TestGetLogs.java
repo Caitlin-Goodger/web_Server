@@ -110,4 +110,18 @@ public class TestGetLogs {
         assertEquals(200,getResp.getStatus());
 
     }
+
+    @Test
+    public void testSingleGetInvalidLevel() throws ServletException, IOException {
+        MockHttpServletRequest req = new MockHttpServletRequest();
+        MockHttpServletResponse resp = new MockHttpServletResponse();
+
+        req.setParameter("level","WAR");
+        req.setParameter("limit","10");
+
+        LogsServlet logsServlet = new LogsServlet();
+
+        logsServlet.doGet(req,resp);
+        assertEquals(400,resp.getStatus());
+    }
 }
