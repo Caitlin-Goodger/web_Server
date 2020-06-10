@@ -9,7 +9,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.Buffer;
+import java.time.*;
 import java.util.ArrayList;
+import java.util.Queue;
+import java.util.PriorityQueue;
 
 import org.apache.log4j.spi.LoggingEvent;
 
@@ -83,8 +86,25 @@ public class LogsServlet extends HttpServlet {
                 foundDupicate = true;
             }
         }
+        Instant current = Instant.parse(jsonObject.get("timestamp").toString());
         if(!foundDupicate) {
-            jsonLogs.add(0, jsonObject);
+            for(int i = 0; i < jsonLogs.size();i++) {
+                JSONObject j = jsonLogs.get(i);
+                Instant i1 = Instant.parse(j.get("timestamp").toString());
+                int compare = current.compareTo(i1);
+                if(compare < 0) {
+                    jsonLogs.add(i,jsonObject);
+                    resp.sendError(HttpServletResponse.SC_CREATED, "Log added");
+                    return;
+                }
+            }
+            if(jsonLogs.size() == 0 ){
+                jsonLogs.add(jsonObject);
+                resp.sendError(HttpServletResponse.SC_CREATED, "Log added");
+                return;
+            }
+            //jsonLogs.add(jsonObject);
+
             resp.sendError(HttpServletResponse.SC_CREATED, "Log added");
             return;
         } else {
