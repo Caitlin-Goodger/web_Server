@@ -46,6 +46,10 @@ public class LogsServlet extends HttpServlet {
         ArrayList<LoggingEvent> logsEvents = new ArrayList<>();
         int count = 0;
         int levelInt = getLevel(sLevel);
+        if(levelInt == -1) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid level");
+            return;
+        }
         for(JSONObject jsonObj : jsonLogs) {
             if(count<limit && levelInt <= getLevel(jsonObj.get("level").toString())) {
                 count++;
