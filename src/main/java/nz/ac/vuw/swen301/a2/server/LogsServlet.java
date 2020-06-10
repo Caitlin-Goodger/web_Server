@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.Buffer;
 import java.time.*;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Queue;
 import java.util.PriorityQueue;
@@ -86,7 +87,13 @@ public class LogsServlet extends HttpServlet {
                 foundDupicate = true;
             }
         }
-        Instant current = Instant.parse(jsonObject.get("timestamp").toString());
+        Instant current = null;
+        try {
+            current = Instant.parse(jsonObject.get("timestamp").toString());
+        } catch(DateTimeParseException e) {
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Time Stamp is invalid");
+            return;
+        }
         if(!foundDupicate) {
             for(int i = 0; i < jsonLogs.size();i++) {
                 JSONObject j = jsonLogs.get(i);
@@ -113,6 +120,11 @@ public class LogsServlet extends HttpServlet {
         }
     }
 
+    /**
+     * Method to convert the level into an int so that they can be compared. 
+     * @param level
+     * @return
+     */
     public int getLevel(String level) {
         if(level.equals("ALL")) {
             return 1;

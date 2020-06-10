@@ -87,7 +87,7 @@ public class TestGetLogs {
         jsonObject.put("id","1234");
         jsonObject.put("message","Testing");
         jsonObject.put("thread", "Main");
-        jsonObject.put("timestamp", "12:00.00");
+        jsonObject.put("timestamp", "2019-07-29T09:12:33.001Z");
         jsonObject.put("logger", "com.example.foo");
         jsonObject.put("level", "DEBUG");
 
