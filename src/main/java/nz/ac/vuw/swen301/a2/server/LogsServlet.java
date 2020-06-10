@@ -45,9 +45,9 @@ public class LogsServlet extends HttpServlet {
         }
         ArrayList<LoggingEvent> logsEvents = new ArrayList<>();
         int count = 0;
-        out.println(jsonLogs.size());
+        int levelInt = getLevel(sLevel);
         for(JSONObject jsonObj : jsonLogs) {
-            if(count<limit) {
+            if(count<limit && levelInt <= getLevel(jsonObj.get("level").toString())) {
                 count++;
                 out.println(jsonObj);
             }
@@ -81,6 +81,28 @@ public class LogsServlet extends HttpServlet {
         } else {
             resp.sendError(HttpServletResponse.SC_CONFLICT, "Duplicate log found");
             return;
+        }
+    }
+
+    public int getLevel(String level) {
+        if(level.equals("ALL")) {
+            return 1;
+        } else if(level.equals("TRACE")) {
+            return 2;
+        } else if (level.equals("DEBUG")) {
+            return 3;
+        } else if(level.equals("INFO")) {
+            return 4;
+        } else if (level.equals("WARN")) {
+            return 5;
+        } else if (level.equals("ERROR")) {
+            return 6;
+        } else if (level.equals("FATAL")) {
+            return 7;
+        } else if(level.equals("OFF")) {
+            return 8;
+        } else {
+            return -1;
         }
     }
 }
