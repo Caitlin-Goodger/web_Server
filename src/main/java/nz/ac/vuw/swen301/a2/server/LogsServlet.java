@@ -94,6 +94,7 @@ public class LogsServlet extends HttpServlet {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Time Stamp is invalid");
             return;
         }
+        boolean added = false;
         if(!foundDupicate) {
             for(int i = 0; i < jsonLogs.size();i++) {
                 JSONObject j = jsonLogs.get(i);
@@ -102,10 +103,11 @@ public class LogsServlet extends HttpServlet {
                 if(compare < 0) {
                     jsonLogs.add(i,jsonObject);
                     resp.sendError(HttpServletResponse.SC_CREATED, "Log added");
+                    added = true;
                     return;
                 }
             }
-            if(jsonLogs.size() == 0 ){
+            if(jsonLogs.size() == 0  || added ==false){
                 jsonLogs.add(jsonObject);
                 resp.sendError(HttpServletResponse.SC_CREATED, "Log added");
                 return;
