@@ -23,9 +23,9 @@ public class StatsCSVServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         resp.setContentType("test/csv");
-        jsonLogs = testJSONLogs();
-        System.out.print(jsonLogs.size());
-        //jsonLogs = LogsServlet.jsonLogs;
+        //jsonLogs = testJSONLogs();
+        //System.out.print(jsonLogs.size());
+        jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates();
         ArrayList<String> loggers = getLoggers();
         ArrayList<String> threads = getThreads();
