@@ -148,4 +148,8 @@ public class LogsServlet extends HttpServlet {
             return -1;
         }
     }
+
+    public ArrayList<JSONObject> getLogs() {
+        return jsonLogs;
+    }
 }
