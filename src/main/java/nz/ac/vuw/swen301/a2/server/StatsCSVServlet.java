@@ -25,6 +25,7 @@ public class StatsCSVServlet extends HttpServlet {
         jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates();
         ArrayList<String> loggers = getLoggers();
+        ArrayList<String> threads = getThreads();
     }
 
     public ArrayList<String> getDates() {
@@ -48,5 +49,16 @@ public class StatsCSVServlet extends HttpServlet {
             }
         }
         return loggers;
+    }
+
+    public ArrayList<String> getThreads() {
+        ArrayList<String> threads = new ArrayList<String>();
+        for(JSONObject jsonObject : jsonLogs) {
+            String thread = jsonObject.getString("thread");
+            if(!threads.contains(thread)) {
+                threads.add(thread);
+            }
+        }
+        return threads;
     }
 }
