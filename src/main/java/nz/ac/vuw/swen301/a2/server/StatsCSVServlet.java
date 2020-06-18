@@ -24,6 +24,7 @@ public class StatsCSVServlet extends HttpServlet {
         resp.setContentType("test/csv");
         jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates();
+        ArrayList<String> loggers = getLoggers();
     }
 
     public ArrayList<String> getDates() {
@@ -31,15 +32,21 @@ public class StatsCSVServlet extends HttpServlet {
         for(JSONObject jsonObject : jsonLogs) {
             String timestamp = jsonObject.get("timestamp").toString().substring(0,10);
             boolean found = false;
-            for(String date : dates) {
-                if(date.equals(timestamp)) {
-                    found = true;
-                }
-            }
-            if(!found){
+            if(!dates.contains(timestamp)) {
                 dates.add(timestamp);
             }
         }
         return dates;
+    }
+
+    public ArrayList<String> getLoggers() {
+        ArrayList<String> loggers = new ArrayList<String>();
+        for(JSONObject jsonObject : jsonLogs) {
+            String log = jsonObject.getString("logger");
+            if(!loggers.contains(log)) {
+                loggers.add(log);
+            }
+        }
+        return loggers;
     }
 }
