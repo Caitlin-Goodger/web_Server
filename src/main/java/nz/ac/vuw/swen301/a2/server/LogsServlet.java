@@ -152,4 +152,8 @@ public class LogsServlet extends HttpServlet {
     public ArrayList<JSONObject> getLogs() {
         return jsonLogs;
     }
+
+    public void setJSONLogsToNothing () {
+        jsonLogs = new ArrayList<>();
+    }
 }

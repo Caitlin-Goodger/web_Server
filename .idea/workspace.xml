@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="952a3de9-0a54-4dce-a1ca-7126e7b6c2ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statsTable.xls" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +26,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="156" column="37" selection-start-line="156" selection-start-column="37" selection-end-line="156" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5150#5151#0" expanded="true" />
+                <element signature="e#5173#5174#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="124" column="50" lean-forward="true" selection-start-line="124" selection-start-column="50" selection-end-line="124" selection-end-column="50" />
+            <state relative-caret-position="180">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#223#231#0" expanded="true" />
@@ -39,10 +56,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="67" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="96" column="20" selection-start-line="25" selection-start-column="7" selection-end-line="96" selection-end-column="20" />
+            <state relative-caret-position="341">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#972#980#0" expanded="true" />
@@ -94,12 +135,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsServlet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" />
       </list>
     </option>
   </component>
@@ -110,7 +152,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -201,7 +243,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592560652830" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592563162812" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -221,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestPostLogs">
+  <component name="RunManager" selected="JUnit.TestStatsCSV">
     <configuration name="TestGetLogs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webapp" />
       <extension name="coverage">
@@ -253,22 +295,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGetLogs.testSingleGetNoLimitMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webapp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.nz.ac.vuw.swen301.a2.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.nz.ac.vuw.swen301.a2.server" />
-      <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestGetLogs" />
-      <option name="METHOD_NAME" value="testSingleGetNoLimitMethod" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestPostLogs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webapp" />
       <extension name="coverage">
@@ -284,7 +310,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPostLogs.testPostDuplicate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestStatsCSV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webapp" />
       <extension name="coverage">
         <pattern>
@@ -293,8 +319,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test.nz.ac.vuw.swen301.a2.server" />
-      <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestPostLogs" />
-      <option name="METHOD_NAME" value="testPostDuplicate" />
+      <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestStatsCSV" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStatsCSV.testCSVValuesAreCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.nz.ac.vuw.swen301.a2.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.nz.ac.vuw.swen301.a2.server" />
+      <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestStatsCSV" />
+      <option name="METHOD_NAME" value="testCSVValuesAreCorrect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -302,11 +343,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestStatsCSV" />
+        <item itemvalue="JUnit.TestStatsCSV.testCSVValuesAreCorrect" />
         <item itemvalue="JUnit.TestPostLogs" />
         <item itemvalue="JUnit.TestGetLogs" />
         <item itemvalue="JUnit.TestGetLogs.testGetAfterPost" />
-        <item itemvalue="JUnit.TestPostLogs.testPostDuplicate" />
-        <item itemvalue="JUnit.TestGetLogs.testSingleGetNoLimitMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -331,47 +372,47 @@
       <workItem from="1592187658240" duration="2044000" />
       <workItem from="1592362622885" duration="651000" />
       <workItem from="1592364616349" duration="619000" />
-      <workItem from="1592478468085" duration="10808000" />
+      <workItem from="1592478468085" duration="13486000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGetLogs_testGetAfterPost - 2020.06.09 at 21h 56m 41s.xml">
-      <configuration name="TestGetLogs.testGetAfterPost" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 28m 22s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGetLogs - 2020.06.09 at 21h 57m 05s.xml">
-      <configuration name="TestGetLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 30m 47s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGetLogs_testGetAfterPost - 2020.06.10 at 13h 41m 14s.xml">
-      <configuration name="TestGetLogs.testGetAfterPost" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 31m 24s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGetLogs - 2020.06.10 at 14h 04m 16s.xml">
-      <configuration name="TestGetLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV_testCSVValuesAreCorrect - 2020.06.19 at 22h 31m 59s.xml">
+      <configuration name="TestStatsCSV.testCSVValuesAreCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPostLogs - 2020.06.10 at 14h 07m 10s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 32m 46s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPostLogs - 2020.06.10 at 14h 08m 41s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 34m 52s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGetLogs - 2020.06.10 at 21h 47m 01s.xml">
-      <configuration name="TestGetLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 35m 53s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGetLogs - 2020.06.10 at 21h 47m 56s.xml">
-      <configuration name="TestGetLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 36m 40s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPostLogs - 2020.06.10 at 21h 49m 19s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 37m 16s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPostLogs - 2020.06.15 at 14h 27m 22s.xml">
-      <configuration name="TestPostLogs" configurationId="JUnit" />
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 38m 09s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44137000" />
+    <option name="totallyTimeSpent" value="46815000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -380,17 +421,17 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.38074398" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.18550107" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="2" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="5" visible="true" weight="0.3369803" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.3261105" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.32827735" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -415,26 +456,6 @@
     <entry file="file://$PROJECT_DIR$/bin/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="111" column="5" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -442,18 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="656" selection-start-line="656" selection-end-line="656" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5076#5077#0" expanded="true" />
-            <element signature="e#5106#5107#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -477,10 +486,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="67" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="96" column="20" selection-start-line="25" selection-start-column="7" selection-end-line="96" selection-end-column="20" />
+        <state relative-caret-position="341">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#972#980#0" expanded="true" />
@@ -490,22 +516,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestGetLogs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        <state relative-caret-position="17">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="124" column="50" lean-forward="true" selection-start-line="124" selection-start-column="50" selection-end-line="124" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#223#231#0" expanded="true" />
             <element signature="e#634#642#0" expanded="true" />
             <element signature="e#974#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="156" column="37" selection-start-line="156" selection-start-column="37" selection-end-line="156" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5150#5151#0" expanded="true" />
+            <element signature="e#5173#5174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
