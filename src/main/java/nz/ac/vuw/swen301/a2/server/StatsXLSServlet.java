@@ -25,9 +25,9 @@ public class StatsXLSServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         resp.setContentType("application/vnd.ms-excel");
 
-        jsonLogs = testJSONLogs();
-        System.out.print(jsonLogs.size());
-        //jsonLogs = LogsServlet.jsonLogs;
+        //jsonLogs = testJSONLogs();
+        //System.out.print(jsonLogs.size());
+        jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates();
         ArrayList<String> loggers = getLoggers();
         ArrayList<String> threads = getThreads();
