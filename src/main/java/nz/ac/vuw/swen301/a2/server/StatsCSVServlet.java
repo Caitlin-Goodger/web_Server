@@ -22,7 +22,7 @@ public class StatsCSVServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
-        resp.setContentType("test/csv");
+        resp.setContentType("text/csv");
         //jsonLogs = testJSONLogs();
         //System.out.print(jsonLogs.size());
         jsonLogs = LogsServlet.jsonLogs;
