@@ -18,8 +18,18 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>StatsCSVServlet</servlet-name>
-        <url-pattern>/logs/statscsv</url-pattern>
+        <url-pattern>/statscsv</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StatsServlet</servlet-name>
+        <servlet-class>nz.ac.vuw.swen301.a2.server.StatsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StatsServlet</servlet-name>
+        <url-pattern>/stats</url-pattern>
+    </servlet-mapping>
+
 
 
 </web-app>
