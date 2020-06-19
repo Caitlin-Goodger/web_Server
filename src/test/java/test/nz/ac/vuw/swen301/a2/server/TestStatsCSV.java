@@ -59,6 +59,98 @@ public class TestStatsCSV {
 
         assertEquals("text/csv",resp3.getContentType());
     }
+
+    @Test
+    public void testReturnValuesContainsTabs() throws ServletException, IOException {
+        MockHttpServletRequest req = new MockHttpServletRequest();
+        MockHttpServletResponse resp = new MockHttpServletResponse();
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id","1234");
+        jsonObject.put("message","Testing");
+        jsonObject.put("thread", "Main");
+        jsonObject.put("timestamp", "2019-07-29T09:12:33.001Z");
+        jsonObject.put("logger", "com.example.foo");
+        jsonObject.put("level", "DEBUG");
+
+        JSONObject jsonObject2 = new JSONObject();
+        jsonObject2.put("id","12345678bfxsfdsf");
+        jsonObject2.put("message","Testing");
+        jsonObject2.put("thread", "Main");
+        jsonObject2.put("timestamp", "2019-07-29T09:12:33.001Z");
+        jsonObject2.put("logger", "com.example.foo");
+        jsonObject2.put("level", "DEBUG");
+
+        req.setContentType("application/json");
+        req.setContent(jsonObject.toString().getBytes("utf-8"));
+
+        LogsServlet logsServlet = new LogsServlet();
+        logsServlet.setJSONLogsToNothing();
+        logsServlet.doPost(req,resp);
+
+
+        MockHttpServletRequest req2 = new MockHttpServletRequest();
+        MockHttpServletResponse resp2 = new MockHttpServletResponse();
+        req2.setContent(jsonObject2.toString().getBytes("utf-8"));
+        logsServlet.doPost(req2,resp2);
+
+        MockHttpServletRequest req3 = new MockHttpServletRequest();
+        MockHttpServletResponse resp3 = new MockHttpServletResponse();
+        StatsCSVServlet statsCSVServlet = new StatsCSVServlet();
+        statsCSVServlet.doGet(req3,resp3);
+
+
+        //Assert that there is at least 1 \t character in the content
+        String content = resp3.getContentAsString();
+        String[] contentSplit = content.split("\t");
+        assertTrue(contentSplit.length>1);
+    }
+
+    @Test
+    public void testReturnValuesContainsNewLines() throws ServletException, IOException {
+        MockHttpServletRequest req = new MockHttpServletRequest();
+        MockHttpServletResponse resp = new MockHttpServletResponse();
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id","1234");
+        jsonObject.put("message","Testing");
+        jsonObject.put("thread", "Main");
+        jsonObject.put("timestamp", "2019-07-29T09:12:33.001Z");
+        jsonObject.put("logger", "com.example.foo");
+        jsonObject.put("level", "DEBUG");
+
+        JSONObject jsonObject2 = new JSONObject();
+        jsonObject2.put("id","12345678bfxsfdsf");
+        jsonObject2.put("message","Testing");
+        jsonObject2.put("thread", "Main");
+        jsonObject2.put("timestamp", "2019-07-29T09:12:33.001Z");
+        jsonObject2.put("logger", "com.example.foo");
+        jsonObject2.put("level", "DEBUG");
+
+        req.setContentType("application/json");
+        req.setContent(jsonObject.toString().getBytes("utf-8"));
+
+        LogsServlet logsServlet = new LogsServlet();
+        logsServlet.setJSONLogsToNothing();
+        logsServlet.doPost(req,resp);
+
+
+        MockHttpServletRequest req2 = new MockHttpServletRequest();
+        MockHttpServletResponse resp2 = new MockHttpServletResponse();
+        req2.setContent(jsonObject2.toString().getBytes("utf-8"));
+        logsServlet.doPost(req2,resp2);
+
+        MockHttpServletRequest req3 = new MockHttpServletRequest();
+        MockHttpServletResponse resp3 = new MockHttpServletResponse();
+        StatsCSVServlet statsCSVServlet = new StatsCSVServlet();
+        statsCSVServlet.doGet(req3,resp3);
+
+        //Assert that there is at least 1 \n character in the content
+        String content = resp3.getContentAsString();
+        String[] contentSplit = content.split("\n");
+        assertTrue(contentSplit.length>1);
+    }
+
     @Test
     public void testCSVValuesAreCorrect() throws ServletException, IOException {
         MockHttpServletRequest req = new MockHttpServletRequest();
@@ -157,7 +249,6 @@ public class TestStatsCSV {
          */
         String content = resp3.getContentAsString();
 
-        System.out.println(content);
         String[] contentSplit = content.split("\n");
         assertEquals("com.example.foo" + "\t" + "1"+ "\t" + "1", contentSplit[1]);
         assertEquals("DEBUG" + "\t" + "1"+ "\t" + "1", contentSplit[4]);

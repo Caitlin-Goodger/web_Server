@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="952a3de9-0a54-4dce-a1ca-7126e7b6c2ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statsTable.xls" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+            <state relative-caret-position="372">
+              <caret line="144" column="69" selection-start-line="144" selection-start-column="69" selection-end-line="144" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -243,7 +239,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592563162812" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592563836567" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -372,23 +368,11 @@
       <workItem from="1592187658240" duration="2044000" />
       <workItem from="1592362622885" duration="651000" />
       <workItem from="1592364616349" duration="619000" />
-      <workItem from="1592478468085" duration="13486000" />
+      <workItem from="1592478468085" duration="14153000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 28m 22s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 30m 47s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 31m 24s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestStatsCSV_testCSVValuesAreCorrect - 2020.06.19 at 22h 31m 59s.xml">
-      <configuration name="TestStatsCSV.testCSVValuesAreCorrect" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestStatsCSV - 2020.06.19 at 22h 32m 46s.xml">
       <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
@@ -407,9 +391,21 @@
     <history-entry file="TestStatsCSV - 2020.06.19 at 22h 38m 09s.xml">
       <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 39m 19s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 45m 44s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 48m 20s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 49m 51s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46815000" />
+    <option name="totallyTimeSpent" value="47482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -553,8 +549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+        <state relative-caret-position="372">
+          <caret line="144" column="69" selection-start-line="144" selection-start-column="69" selection-end-line="144" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
