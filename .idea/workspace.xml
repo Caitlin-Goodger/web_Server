@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="952a3de9-0a54-4dce-a1ca-7126e7b6c2ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,14 +63,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="144" column="69" selection-start-line="144" selection-start-column="69" selection-end-line="144" selection-end-column="69" />
+            <state relative-caret-position="270">
+              <caret line="102" column="44" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -239,7 +248,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592563836567" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592563940053" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -368,14 +377,11 @@
       <workItem from="1592187658240" duration="2044000" />
       <workItem from="1592362622885" duration="651000" />
       <workItem from="1592364616349" duration="619000" />
-      <workItem from="1592478468085" duration="14153000" />
+      <workItem from="1592478468085" duration="14272000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 32m 46s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestStatsCSV - 2020.06.19 at 22h 34m 52s.xml">
       <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
@@ -403,9 +409,12 @@
     <history-entry file="TestStatsCSV - 2020.06.19 at 22h 49m 51s.xml">
       <configuration name="TestStatsCSV" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestStatsCSV - 2020.06.19 at 22h 50m 41s.xml">
+      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47482000" />
+    <option name="totallyTimeSpent" value="47601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -549,11 +558,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="144" column="69" selection-start-line="144" selection-start-column="69" selection-end-line="144" selection-end-column="69" />
+        <state relative-caret-position="270">
+          <caret line="102" column="44" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
