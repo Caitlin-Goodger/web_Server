@@ -91,6 +91,8 @@ public class TestPostLogs {
         logsServlet.doPost(req,resp);
 
         assertEquals(400,resp.getStatus());
+
+
     }
 
 }

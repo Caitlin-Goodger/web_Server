@@ -21,7 +21,7 @@ public class StatsXLSServlet extends HttpServlet {
     public static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         resp.setContentType("application/vnd.ms-excel");
 

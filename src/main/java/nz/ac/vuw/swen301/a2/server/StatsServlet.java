@@ -17,7 +17,7 @@ public class StatsServlet extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/html");
         //jsonLogs = testJSONLogs();
@@ -38,7 +38,7 @@ public class StatsServlet extends HttpServlet {
 
         out.write("<html>");
         out.write("<body>");
-        out.write("<table border ='1'>");
+        out.write("<table border ='1' id = 'table1' >");
         out.write("<tr>");
         out.write("<td> </td>");
         for(int i = 0; i< dates.size();i++) {
@@ -115,6 +115,7 @@ public class StatsServlet extends HttpServlet {
             }
             out.write("</tr>");
         }
+        out.write("</table>");
         out.write("</body>");
         out.write("</html>");
         out.close();
