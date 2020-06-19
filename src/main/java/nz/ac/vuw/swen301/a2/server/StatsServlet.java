@@ -20,9 +20,9 @@ public class StatsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/html");
-        jsonLogs = testJSONLogs();
-        System.out.print(jsonLogs.size());
-        //jsonLogs = LogsServlet.jsonLogs;
+        //jsonLogs = testJSONLogs();
+        //System.out.print(jsonLogs.size());
+        jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates();
         ArrayList<String> loggers = getLoggers();
         ArrayList<String> threads = getThreads();
