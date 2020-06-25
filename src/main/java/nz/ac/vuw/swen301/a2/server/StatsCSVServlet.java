@@ -94,6 +94,7 @@ public class StatsCSVServlet extends HttpServlet {
             }
             out.write("\n");
         }
+        resp.setStatus(200);
         out.close();
     }
 

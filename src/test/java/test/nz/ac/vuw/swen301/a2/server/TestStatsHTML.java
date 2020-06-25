@@ -237,4 +237,46 @@ public class TestStatsHTML {
         assertEquals(1, (int) values.get("Main").get(0));
         assertEquals(1, (int) values.get("Main").get(1));
     }
+
+    @Test
+    public void testReturnTypeIsCorrect() throws ServletException, IOException {
+        MockHttpServletRequest req = new MockHttpServletRequest();
+        MockHttpServletResponse resp = new MockHttpServletResponse();
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("id","1234");
+        jsonObject.put("message","Testing");
+        jsonObject.put("thread", "Main");
+        jsonObject.put("timestamp", "2019-07-29T09:12:33.001Z");
+        jsonObject.put("logger", "com.example.foo");
+        jsonObject.put("level", "DEBUG");
+
+        JSONObject jsonObject2 = new JSONObject();
+        jsonObject2.put("id","12345678bfxsfdsf");
+        jsonObject2.put("message","Testing");
+        jsonObject2.put("thread", "Main");
+        jsonObject2.put("timestamp", "2019-09-29T09:12:33.001Z");
+        jsonObject2.put("logger", "com.example.foo");
+        jsonObject2.put("level", "DEBUG");
+
+        req.setContentType("application/json");
+        req.setContent(jsonObject.toString().getBytes("utf-8"));
+
+        LogsServlet logsServlet = new LogsServlet();
+        logsServlet.setJSONLogsToNothing();
+        logsServlet.doPost(req,resp);
+
+
+        MockHttpServletRequest req2 = new MockHttpServletRequest();
+        MockHttpServletResponse resp2 = new MockHttpServletResponse();
+        req2.setContent(jsonObject2.toString().getBytes("utf-8"));
+        logsServlet.doPost(req2,resp2);
+
+        MockHttpServletRequest req3 = new MockHttpServletRequest();
+        MockHttpServletResponse resp3 = new MockHttpServletResponse();
+        StatsServlet statsServlet = new StatsServlet();
+        statsServlet.doGet(req3,resp3);
+
+        assertEquals(200,resp3.getStatus());
+    }
 }

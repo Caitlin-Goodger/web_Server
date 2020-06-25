@@ -119,6 +119,7 @@ public class StatsServlet extends HttpServlet {
         out.write("</body>");
         out.write("</html>");
         out.close();
+        resp.setStatus(200);
     }
 
     public ArrayList<String> getDates() {
