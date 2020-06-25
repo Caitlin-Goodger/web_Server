@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="952a3de9-0a54-4dce-a1ca-7126e7b6c2ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsXLS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file.xls" beforeDir="false" afterPath="$PROJECT_DIR$/file.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
-              <caret line="116" column="12" lean-forward="true" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="72" />
+              <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="1035">
               <caret line="294" selection-start-line="294" selection-end-line="294" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -53,11 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="275" column="46" selection-start-line="275" selection-start-column="46" selection-end-line="275" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -65,8 +61,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="113" column="23" lean-forward="true" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+            <state relative-caret-position="1292">
+              <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsXLS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="203" column="46" selection-start-line="203" selection-start-column="46" selection-end-line="203" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="95" column="9" lean-forward="true" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+              <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#972#980#0" expanded="true" />
@@ -89,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+              <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#549#557#0" expanded="true" />
@@ -133,11 +141,12 @@
         <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestPostLogs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java" />
         <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java" />
         <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java" />
+        <option value="$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsXLS.java" />
       </list>
     </option>
   </component>
@@ -149,7 +158,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -239,7 +248,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593072874183" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593075118532" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -259,22 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestStatsHTML">
-    <configuration name="TestGetLogs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="webapp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.nz.ac.vuw.swen301.a2.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.nz.ac.vuw.swen301.a2.server" />
-      <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestGetLogs" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestStatsXLS">
     <configuration name="TestPostLogs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webapp" />
       <extension name="coverage">
@@ -336,13 +330,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestStatsXLS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.nz.ac.vuw.swen301.a2.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.nz.ac.vuw.swen301.a2.server" />
+      <option name="MAIN_CLASS_NAME" value="test.nz.ac.vuw.swen301.a2.server.TestStatsXLS" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestStatsXLS" />
         <item itemvalue="JUnit.TestStatsHTML" />
         <item itemvalue="JUnit.TestStatsCSV" />
         <item itemvalue="JUnit.TestStatsCSV.testCSVValuesAreCorrect" />
         <item itemvalue="JUnit.TestPostLogs" />
-        <item itemvalue="JUnit.TestGetLogs" />
       </list>
     </recent_temporary>
   </component>
@@ -367,44 +376,44 @@
       <workItem from="1592187658240" duration="2044000" />
       <workItem from="1592362622885" duration="651000" />
       <workItem from="1592364616349" duration="619000" />
-      <workItem from="1592478468085" duration="21783000" />
+      <workItem from="1592478468085" duration="24022000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 07m 33s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 42m 45s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 07m 50s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 43m 22s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 08m 23s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 43m 58s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 08m 42s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 44m 09s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 09m 41s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 48m 50s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 10m 06s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 49m 00s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 11m 19s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 49m 19s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 12m 07s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 50m 01s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsCSV - 2020.06.25 at 20h 13m 19s.xml">
-      <configuration name="TestStatsCSV" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 51m 12s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestStatsHTML - 2020.06.25 at 20h 14m 32s.xml">
-      <configuration name="TestStatsHTML" configurationId="JUnit" />
+    <history-entry file="TestStatsXLS - 2020.06.25 at 20h 51m 49s.xml">
+      <configuration name="TestStatsXLS" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55112000" />
+    <option name="totallyTimeSpent" value="57351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -416,7 +425,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.18550107" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.063432835" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -498,17 +507,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/LogsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
-          <caret line="116" column="12" lean-forward="true" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="113" column="23" lean-forward="true" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+          <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -517,7 +516,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsCSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
+        <state relative-caret-position="1035">
           <caret line="294" selection-start-line="294" selection-end-line="294" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -525,10 +524,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#549#557#0" expanded="true" />
+            <element signature="e#960#968#0" expanded="true" />
+            <element signature="e#1300#1308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsCSVServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="95" column="9" lean-forward="true" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#972#980#0" expanded="true" />
@@ -540,23 +552,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsHTML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="275" column="46" selection-start-line="275" selection-start-column="46" selection-end-line="275" selection-end-column="46" />
+        <state relative-caret-position="306">
+          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsXLSServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nz/ac/vuw/swen301/a2/server/StatsServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/nz/ac/vuw/swen301/a2/server/TestStatsXLS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+        <state relative-caret-position="389">
+          <caret line="203" column="46" selection-start-line="203" selection-start-column="46" selection-end-line="203" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#549#557#0" expanded="true" />
-            <element signature="e#960#968#0" expanded="true" />
-            <element signature="e#1300#1308#0" expanded="true" />
           </folding>
         </state>
       </provider>
