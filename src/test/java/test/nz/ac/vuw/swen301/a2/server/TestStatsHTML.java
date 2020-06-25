@@ -202,7 +202,7 @@ public class TestStatsHTML {
         // Assert that each row has three columns in it.
         Map<String, List<Integer>> values = new HashMap<>();
         Document doc = Jsoup.parse(resp3.getContentAsString());
-        System.out.println(doc);
+
         for (Element table : doc.select("table")) {
             for (Element row : table.select("tr:gt(0)")) {
                 Elements tds = row.select("td");
@@ -215,7 +215,7 @@ public class TestStatsHTML {
                 values.put(name,intvalues);
             }
         }
-        //Test that all the values are what I expected of them. 
+        //Test that all the values are what I expected of them.
         assertEquals(1, (int) values.get("com.example.foo").get(0));
         assertEquals(1, (int) values.get("com.example.foo").get(1));
         assertEquals(0, (int) values.get("ALL").get(0));

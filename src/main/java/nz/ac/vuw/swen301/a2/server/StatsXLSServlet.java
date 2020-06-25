@@ -22,12 +22,12 @@ public class StatsXLSServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
+        //PrintWriter out = resp.getWriter();
         resp.setContentType("application/vnd.ms-excel");
 
-        //jsonLogs = testJSONLogs();
-        //System.out.print(jsonLogs.size());
-        jsonLogs = LogsServlet.jsonLogs;
+        jsonLogs = testJSONLogs();
+        System.out.print(jsonLogs.size());
+        //jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates();
         ArrayList<String> loggers = getLoggers();
         ArrayList<String> threads = getThreads();
@@ -108,23 +108,12 @@ public class StatsXLSServlet extends HttpServlet {
             rows++;
         }
 
+        OutputStream output= resp.getOutputStream();
 
-        out.close();
-        try {
-            FileOutputStream outputStream = new FileOutputStream("statsTable.xls");
-            workbook.write(outputStream);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        resp.setContentType("application/vnd.ms-excel");
-        resp.setHeader("Content-Disposition", "filename=\"statsTable.xls\"");
-        File srcFile = new File("statsTable.xls");
-
-        resp.setStatus(200);
+        output.write(workbook.getBytes());
+        output.close();
+        FileOutputStream fileOut = new FileOutputStream("file.xls");
+        workbook.write(fileOut);
 
 
     }
