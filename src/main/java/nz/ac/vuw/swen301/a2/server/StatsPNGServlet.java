@@ -66,19 +66,18 @@ public class StatsPNGServlet extends HttpServlet {
         }
         graphics.dispose();
 
-        File file = new File("file.png");
-        ImageIO.write(bufferedImage,"png", file);
         OutputStream output= resp.getOutputStream();
-        FileInputStream in = new FileInputStream(file);
-        try {
-            byte[] buf = new byte[1024];
-            int counter = 0;
-            while ((counter = in.read(buf)) >= 0) {
-                output.write(buf, 0, counter);
-            }
-        } finally {
-            in.close();
-        }
+        ImageIO.write(bufferedImage, "png", output);
+//        FileInputStream in = new FileInputStream(file);
+//        try {
+//            byte[] buf = new byte[1024];
+//            int counter = 0;
+//            while ((counter = in.read(buf)) >= 0) {
+//                output.write(buf, 0, counter);
+//            }
+//        } finally {
+//            in.close();
+//        }
 
         output.close();
         resp.setStatus(200);
