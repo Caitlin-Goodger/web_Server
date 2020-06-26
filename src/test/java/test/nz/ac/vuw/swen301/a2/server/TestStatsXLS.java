@@ -62,8 +62,8 @@ public class TestStatsXLS {
         StatsXLSServlet statsXLSServlet = new StatsXLSServlet();
         statsXLSServlet.doGet(req3,resp3);
 
-        FileInputStream excelFile = new FileInputStream(new File("file.xls"));
-        HSSFWorkbook workbook = new HSSFWorkbook(excelFile);
+        InputStream input = new ByteArrayInputStream(resp3.getContentAsByteArray());
+        HSSFWorkbook workbook = new HSSFWorkbook(input);
         HSSFSheet sheet = workbook.getSheetAt(0);
 
         //Check that all the values is expected
@@ -150,11 +150,6 @@ public class TestStatsXLS {
         StatsXLSServlet statsXLSServlet = new StatsXLSServlet();
         statsXLSServlet.doGet(req3,resp3);
 
-        FileInputStream excelFile = new FileInputStream(new File("file.xls"));
-        HSSFWorkbook workbook = new HSSFWorkbook(excelFile);
-        HSSFSheet sheet = workbook.getSheetAt(0);
-
-
         assertEquals(200,resp3.getStatus());
     }
 
@@ -196,10 +191,6 @@ public class TestStatsXLS {
         MockHttpServletResponse resp3 = new MockHttpServletResponse();
         StatsXLSServlet statsXLSServlet = new StatsXLSServlet();
         statsXLSServlet.doGet(req3,resp3);
-
-        FileInputStream excelFile = new FileInputStream(new File("file.xls"));
-        HSSFWorkbook workbook = new HSSFWorkbook(excelFile);
-        HSSFSheet sheet = workbook.getSheetAt(0);
 
         assertEquals("application/vnd.ms-excel",resp3.getContentType());
     }

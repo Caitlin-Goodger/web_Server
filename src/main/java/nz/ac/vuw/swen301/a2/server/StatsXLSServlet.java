@@ -21,7 +21,7 @@ public class StatsXLSServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("application/vnd.ms-excel");
-        resp.setHeader("Content-Disposition", "attachment; filename=\"file.xls\"");
+        resp.setHeader("Content-Disposition", "attachment; filename=\"file.xlsx\"");
         ArrayList<JSONObject> jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates(jsonLogs);
         ArrayList<String> loggers = getLoggers(jsonLogs);
@@ -104,16 +104,8 @@ public class StatsXLSServlet extends HttpServlet {
         }
 
         OutputStream output= resp.getOutputStream();
-
-        output.write(workbook.getBytes());
+        workbook.write(output);
         output.close();
-        FileOutputStream fileOut = new FileOutputStream("file.xls");
-        try {
-            workbook.write(fileOut);
-        } finally {
-            fileOut.close();
-        }
-
         resp.setStatus(200);
 
     }
