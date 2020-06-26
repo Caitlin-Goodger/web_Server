@@ -24,6 +24,7 @@ public class StatsPNGServlet extends HttpServlet {
         //jsonLogs = testJSONLogs();
         //System.out.print(jsonLogs.size());
         ArrayList<JSONObject> jsonLogs = LogsServlet.jsonLogs;
+        jsonLogs = testJSONLogs();
         ArrayList<String> warnings = new ArrayList<>();
         warnings.add("ALL");
         warnings.add("TRACE");

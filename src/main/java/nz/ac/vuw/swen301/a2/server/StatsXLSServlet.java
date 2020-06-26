@@ -22,10 +22,11 @@ public class StatsXLSServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //PrintWriter out = resp.getWriter();
         resp.setContentType("application/vnd.ms-excel");
-
+        resp.setHeader("Content-Disposition", "attachment; filename=\"file.xls\"");
         //jsonLogs = testJSONLogs();
         //System.out.print(jsonLogs.size());
         ArrayList<JSONObject> jsonLogs = LogsServlet.jsonLogs;
+        jsonLogs = testJSONLogs();
         ArrayList<String> dates = getDates(jsonLogs);
         ArrayList<String> loggers = getLoggers(jsonLogs);
         ArrayList<String> threads = getThreads(jsonLogs);
