@@ -23,7 +23,7 @@ public class LogsServlet extends HttpServlet {
     public LogsServlet() {
     }
 
-    public static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
+    static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,7 +39,7 @@ public class LogsServlet extends HttpServlet {
             return;
         }
 
-        if (sLimit == null || limit < 0 || limit > Integer.MAX_VALUE) {
+        if (limit < 0) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid limit");
             return;
         }
@@ -47,7 +47,6 @@ public class LogsServlet extends HttpServlet {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid level");
             return;
         }
-        ArrayList<LoggingEvent> logsEvents = new ArrayList<>();
         int count = 0;
         int levelInt = getLevel(sLevel);
         if(levelInt == -1) {
@@ -153,7 +152,7 @@ public class LogsServlet extends HttpServlet {
         return jsonLogs;
     }
 
-    public void setJSONLogsToNothing () {
+    public static void setJSONLogsToNothing () {
         jsonLogs = new ArrayList<>();
     }
 }

@@ -17,18 +17,16 @@ import java.util.UUID;
 
 public class StatsCSVServlet extends HttpServlet {
 
-    public static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
-
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/csv");
         //jsonLogs = testJSONLogs();
         //System.out.print(jsonLogs.size());
-        jsonLogs = LogsServlet.jsonLogs;
-        ArrayList<String> dates = getDates();
-        ArrayList<String> loggers = getLoggers();
-        ArrayList<String> threads = getThreads();
+        ArrayList<JSONObject> jsonLogs = LogsServlet.jsonLogs;
+        ArrayList<String> dates = getDates(jsonLogs);
+        ArrayList<String> loggers = getLoggers(jsonLogs);
+        ArrayList<String> threads = getThreads(jsonLogs);
         ArrayList<String> warnings = new ArrayList<>();
         warnings.add("ALL");
         warnings.add("TRACE");
@@ -98,7 +96,7 @@ public class StatsCSVServlet extends HttpServlet {
         out.close();
     }
 
-    public ArrayList<String> getDates() {
+    public ArrayList<String> getDates(ArrayList<JSONObject> jsonLogs) {
         ArrayList<String> dates = new ArrayList<String>();
         for(JSONObject jsonObject : jsonLogs) {
             String timestamp = jsonObject.get("timestamp").toString().substring(0,10);
@@ -110,7 +108,7 @@ public class StatsCSVServlet extends HttpServlet {
         return dates;
     }
 
-    public ArrayList<String> getLoggers() {
+    public ArrayList<String> getLoggers(ArrayList<JSONObject> jsonLogs) {
         ArrayList<String> loggers = new ArrayList<String>();
         for(JSONObject jsonObject : jsonLogs) {
             String log = jsonObject.getString("logger");
@@ -121,7 +119,7 @@ public class StatsCSVServlet extends HttpServlet {
         return loggers;
     }
 
-    public ArrayList<String> getThreads() {
+    public ArrayList<String> getThreads(ArrayList<JSONObject> jsonLogs) {
         ArrayList<String> threads = new ArrayList<String>();
         for(JSONObject jsonObject : jsonLogs) {
             String thread = jsonObject.getString("thread");

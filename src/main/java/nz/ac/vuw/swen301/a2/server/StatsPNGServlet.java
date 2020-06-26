@@ -17,16 +17,13 @@ import java.util.UUID;
 
 public class StatsPNGServlet extends HttpServlet {
 
-    public static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
-
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //PrintWriter out = resp.getWriter();
         resp.setContentType("image/png");
         //jsonLogs = testJSONLogs();
         //System.out.print(jsonLogs.size());
-        jsonLogs = LogsServlet.jsonLogs;
-        ArrayList<String> dates = getDates();
+        ArrayList<JSONObject> jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> warnings = new ArrayList<>();
         warnings.add("ALL");
         warnings.add("TRACE");
@@ -63,17 +60,17 @@ public class StatsPNGServlet extends HttpServlet {
 
         int yValue = 40;
         int count  = 0;
-        for(String warn : warningLevels.keySet()) {
+        for(Map.Entry<String,Integer> entry : warningLevels.entrySet()) {
             graphics.setColor(listOfColours.get(count));
-            graphics.drawString(warn,30,yValue);
-            graphics.drawRect(100, yValue-20,50*warningLevels.get(warn),30);
+            graphics.drawString(entry.getKey(),30,yValue);
+            graphics.drawRect(100, yValue-20,50*entry.getValue(),30);
             yValue = yValue + 40;
             count++;
         }
         graphics.dispose();
 
         File file = new File("file.png");
-        ImageIO.write(bufferedImage,"png", file);
+        //ImageIO.write(bufferedImage,"png", file);
         OutputStream output= resp.getOutputStream();
         FileInputStream in = new FileInputStream(file);
         byte[] buf = new byte[1024];
@@ -81,22 +78,12 @@ public class StatsPNGServlet extends HttpServlet {
         while ((counter = in.read(buf)) >= 0) {
             output.write(buf, 0, counter);
         }
+        in.close();
         output.close();
         //out.close();
         resp.setStatus(200);
     }
 
-    public ArrayList<String> getDates() {
-        ArrayList<String> dates = new ArrayList<String>();
-        for(JSONObject jsonObject : jsonLogs) {
-            String timestamp = jsonObject.get("timestamp").toString().substring(0,10);
-            boolean found = false;
-            if(!dates.contains(timestamp)) {
-                dates.add(timestamp);
-            }
-        }
-        return dates;
-    }
 
 
     public ArrayList<JSONObject> testJSONLogs() {
