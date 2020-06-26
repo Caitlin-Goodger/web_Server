@@ -70,12 +70,16 @@ public class StatsPNGServlet extends HttpServlet {
         ImageIO.write(bufferedImage,"png", file);
         OutputStream output= resp.getOutputStream();
         FileInputStream in = new FileInputStream(file);
-        byte[] buf = new byte[1024];
-        int counter = 0;
-        while ((counter = in.read(buf)) >= 0) {
-            output.write(buf, 0, counter);
+        try {
+            byte[] buf = new byte[1024];
+            int counter = 0;
+            while ((counter = in.read(buf)) >= 0) {
+                output.write(buf, 0, counter);
+            }
+        } finally {
+            in.close();
         }
-        in.close();
+
         output.close();
         resp.setStatus(200);
     }

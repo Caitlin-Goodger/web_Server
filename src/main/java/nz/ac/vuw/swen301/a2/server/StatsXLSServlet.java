@@ -108,8 +108,12 @@ public class StatsXLSServlet extends HttpServlet {
         output.write(workbook.getBytes());
         output.close();
         FileOutputStream fileOut = new FileOutputStream("file.xls");
-        workbook.write(fileOut);
-        fileOut.close();
+        try {
+            workbook.write(fileOut);
+        } finally {
+            fileOut.close();
+        }
+
         resp.setStatus(200);
 
     }
