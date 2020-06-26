@@ -20,12 +20,12 @@ public class StatsPNGServlet extends HttpServlet {
     public static ArrayList<JSONObject> jsonLogs = new ArrayList<>();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //PrintWriter out = resp.getWriter();
         resp.setContentType("image/png");
-        jsonLogs = testJSONLogs();
-        System.out.print(jsonLogs.size());
-        //jsonLogs = LogsServlet.jsonLogs;
+        //jsonLogs = testJSONLogs();
+        //System.out.print(jsonLogs.size());
+        jsonLogs = LogsServlet.jsonLogs;
         ArrayList<String> dates = getDates();
         ArrayList<String> warnings = new ArrayList<>();
         warnings.add("ALL");
