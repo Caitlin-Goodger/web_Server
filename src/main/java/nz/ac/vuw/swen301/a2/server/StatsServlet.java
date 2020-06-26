@@ -18,7 +18,6 @@ public class StatsServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/html");
         ArrayList<JSONObject> jsonLogs = LogsServlet.jsonLogs;
-        jsonLogs = testJSONLogs();
         ArrayList<String> dates = getDates(jsonLogs);
         ArrayList<String> loggers = getLoggers(jsonLogs);
         ArrayList<String> threads = getThreads(jsonLogs);
@@ -152,29 +151,4 @@ public class StatsServlet extends HttpServlet {
         return threads;
     }
 
-    public ArrayList<JSONObject> testJSONLogs() {
-        ArrayList<JSONObject> j = new ArrayList<>();
-
-        JSONObject j1 = new JSONObject();
-        j1.put("id", UUID.randomUUID().toString());
-        j1.put("level", "ALL");
-        j1.put("timestamp", "2019-07-29T09:12:33.001Z");
-        j1.put("thread","main");
-        j1.put("message", "help");
-        j1.put("logger", "logger");
-
-        j.add(j1);
-
-        JSONObject j2 = new JSONObject();
-        j2.put("id", UUID.randomUUID().toString());
-        j2.put("level", "DEBUG");
-        j2.put("timestamp", "2018-07-29T09:12:33.001Z");
-        j2.put("thread","main");
-        j2.put("message", "help");
-        j2.put("logger", "l");
-
-        j.add(j2);
-
-        return j;
-    }
 }

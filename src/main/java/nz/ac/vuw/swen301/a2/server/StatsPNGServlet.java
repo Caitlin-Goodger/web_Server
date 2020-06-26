@@ -19,12 +19,8 @@ public class StatsPNGServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //PrintWriter out = resp.getWriter();
         resp.setContentType("image/png");
-        //jsonLogs = testJSONLogs();
-        //System.out.print(jsonLogs.size());
         ArrayList<JSONObject> jsonLogs = LogsServlet.jsonLogs;
-        jsonLogs = testJSONLogs();
         ArrayList<String> warnings = new ArrayList<>();
         warnings.add("ALL");
         warnings.add("TRACE");
@@ -71,7 +67,7 @@ public class StatsPNGServlet extends HttpServlet {
         graphics.dispose();
 
         File file = new File("file.png");
-        //ImageIO.write(bufferedImage,"png", file);
+        ImageIO.write(bufferedImage,"png", file);
         OutputStream output= resp.getOutputStream();
         FileInputStream in = new FileInputStream(file);
         byte[] buf = new byte[1024];
@@ -81,35 +77,7 @@ public class StatsPNGServlet extends HttpServlet {
         }
         in.close();
         output.close();
-        //out.close();
         resp.setStatus(200);
     }
 
-
-
-    public ArrayList<JSONObject> testJSONLogs() {
-        ArrayList<JSONObject> j = new ArrayList<>();
-
-        JSONObject j1 = new JSONObject();
-        j1.put("id", UUID.randomUUID().toString());
-        j1.put("level", "ALL");
-        j1.put("timestamp", "2019-07-29T09:12:33.001Z");
-        j1.put("thread","main");
-        j1.put("message", "help");
-        j1.put("logger", "logger");
-
-        j.add(j1);
-
-        JSONObject j2 = new JSONObject();
-        j2.put("id", UUID.randomUUID().toString());
-        j2.put("level", "DEBUG");
-        j2.put("timestamp", "2018-07-29T09:12:33.001Z");
-        j2.put("thread","main");
-        j2.put("message", "help");
-        j2.put("logger", "l");
-
-        j.add(j2);
-
-        return j;
-    }
 }
