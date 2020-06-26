@@ -9,9 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +21,7 @@ public class StatsPNGServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
+        //PrintWriter out = resp.getWriter();
         resp.setContentType("image/png");
         jsonLogs = testJSONLogs();
         System.out.print(jsonLogs.size());
@@ -51,7 +49,7 @@ public class StatsPNGServlet extends HttpServlet {
             warningLevels.put(warnings.get(i),count);
         }
 
-        BufferedImage bufferedImage = new BufferedImage(500, 250, BufferedImage.TYPE_INT_RGB);
+        BufferedImage bufferedImage = new BufferedImage(500, 350, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = bufferedImage.createGraphics();
         ArrayList<Color> listOfColours = new ArrayList<>();
         listOfColours.add(Color.red);
@@ -61,25 +59,30 @@ public class StatsPNGServlet extends HttpServlet {
         listOfColours.add(Color.blue);
         listOfColours.add(Color.pink);
         listOfColours.add(new Color(153, 0, 255));
-        listOfColours.add(Color.black);
+        listOfColours.add(Color.white);
 
-        int yValue = 0;
+        int yValue = 40;
         int count  = 0;
         for(String warn : warningLevels.keySet()) {
-            graphics.drawString(warn,0,yValue);
-
             graphics.setColor(listOfColours.get(count));
-            graphics.drawRect(100, yValue,50*warningLevels.get(warn),25);
-            yValue = yValue + 30;
+            graphics.drawString(warn,30,yValue);
+            graphics.drawRect(100, yValue-20,50*warningLevels.get(warn),30);
+            yValue = yValue + 40;
             count++;
         }
         graphics.dispose();
 
         File file = new File("file.png");
         ImageIO.write(bufferedImage,"png", file);
-
-
-        out.close();
+        OutputStream output= resp.getOutputStream();
+        FileInputStream in = new FileInputStream(file);
+        byte[] buf = new byte[1024];
+        int counter = 0;
+        while ((counter = in.read(buf)) >= 0) {
+            output.write(buf, 0, counter);
+        }
+        output.close();
+        //out.close();
         resp.setStatus(200);
     }
 
